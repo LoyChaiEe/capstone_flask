@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, jsonify, request, make_response
+from flask_cors import CORS, cross_origin
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image
@@ -11,7 +11,6 @@ import cv2
 app = Flask(__name__)
 
 #CORS for Flask server, Please change the location of your frontend in line 15
-CORS(app)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
 
 hiraganaModel1 = load_model("assets/hiraganamodel1.h5")
@@ -30,7 +29,7 @@ def base():
 
 # hiragana prediction
 @app.route('/writing/verify/hiragana', methods=['POST'])
-def post_data():
+def hiraganaVerify():
     dataURL = request.json['dataURL']# retrieve the image data from the request
     ans = request.json['answer']
     # decoding  the image
@@ -108,9 +107,9 @@ def post_data():
     response_data={"isCorrect": isCorrect, "output": predicted}
     return jsonify(response_data)
 
-# katakana prediction
+# hiragana prediction
 @app.route('/writing/verify/katakana', methods=['POST'])
-def post_data():
+def katakanaVerify():
     dataURL = request.json['dataURL']# retrieve the image data from the request
     ans = request.json['answer']
     # decoding  the image

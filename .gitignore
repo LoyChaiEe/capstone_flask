@@ -1,6 +1,6 @@
 # Virtual environment
 venv
-
+flask
 # Compiled files
 *.pyc
 *.pyo

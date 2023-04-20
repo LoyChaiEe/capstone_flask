@@ -66,7 +66,7 @@ Here are the steps to install these dependencies:
      pip install Flask Flask-Cors tensorflow Pillow numpy opencv-python-headless
      ```
 
-This will install Flask, Flask-Cors, TensorFlow, Pillow, NumPy, and OpenCV. Once the installation is complete, you can start the Flask server by running the following command in your terminal
+This will install Flask, Flask-Cors, TensorFlow, Pillow, NumPy, and OpenCV. 
 
 6. Running Flask Server:
    - In your termial run the followig command:
