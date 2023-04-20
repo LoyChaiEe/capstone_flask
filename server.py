@@ -9,8 +9,10 @@ import numpy as np
 import cv2
 
 app = Flask(__name__)
+
+#CORS for Flask server, Please change the location of your frontend in line 15
 CORS(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
 
 hiraganaModel1 = load_model("assets/hiraganamodel1.h5")
 hiraganaModel2 = load_model("assets/hiraganamodel2.h5")
