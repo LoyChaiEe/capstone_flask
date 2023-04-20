@@ -8,7 +8,7 @@
 
 ## Installation
 
-To run this Flask server, you need to install Python 3.x and pip, the Python package manager, as well as the following dependencies:
+To run this Flask server, you need to install Python 3.8 and above and pip, the Python package manager, as well as the following dependencies:
 
 - Flask
 - Flask-Cors
