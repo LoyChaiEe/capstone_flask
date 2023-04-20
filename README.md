@@ -19,9 +19,9 @@ To run this Flask server, you need to install Python 3.x and pip, the Python pac
 
 Here are the steps to install these dependencies:
 
-1. Install Python 3.x: 
-   - For Windows, go to https://www.python.org/downloads/windows/ and download the latest version of Python 3.x. Follow the installation instructions.
-   - For macOS, go to https://www.python.org/downloads/mac-osx/ and download the latest version of Python 3.x. Follow the installation instructions.
+1. Install Python 3.8 and above: 
+   - For Windows, go to https://www.python.org/downloads/windows/ and download the latest version of Python 3.8. Follow the installation instructions.
+   - For macOS, go to https://www.python.org/downloads/mac-osx/ and download the latest version of Python 3.8. Follow the installation instructions.
    - For Linux, open a terminal and run the following command:
    
      ```sh
