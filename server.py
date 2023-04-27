@@ -13,15 +13,25 @@ app = Flask(__name__)
 #CORS for Flask server, Please change the location of your frontend in line 15
 CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
 
-hiraganaModel1 = load_model("assets/hiraganamodel1.h5")
-hiraganaModel2 = load_model("assets/hiraganamodel2.h5")
-hiraganaModel3 = load_model("assets/hiraganamodel3.h5")
-hiraganaModel4 = load_model("assets/hiraganamodel4.h5")
+hiraganaModel1 = load_model("assets/Models/hiraganamodel1.h5")
+hiraganaModel2 = load_model("assets/Models/hiraganamodel2.h5")
+hiraganaModel3 = load_model("assets/Models/hiraganamodel3.h5")
+hiraganaModel4 = load_model("assets/Models/hiraganamodel4.h5")
 
 Hiragana1=["あ", "い", "し", "た"]
 Hiragana2=['え', 'お', 'そ', 'み']
 Hiragana3=['う', 'く', 'す', 'ん']
 Hiragana4=['か', 'き', 'ち', 'に']
+
+katakanaModel1 = load_model("assets/Models/katakanamodel1.h5")
+katakanaModel2 = load_model("assets/Models/katakanamodel2.h5")
+katakanaModel3 = load_model("assets/Models/katakanamodel3.h5")
+katakanaModel4 = load_model("assets/Models/katakanamodel4.h5")
+
+Katakana1 = ["イ", "ス", "ソ", "ミ"]
+Katakana2 = ["ウ", "ク", "ニ", "ン"]
+Katakana3 = ["エ", "キ", "シ", "タ"]
+Katakana4 = ["ア", "オ", "カ", "チ"]
 
 @app.route('/')
 def base():
@@ -150,20 +160,20 @@ def katakanaVerify():
     # preddicting models
     result = []
     for x  in range(0,4):
-        model = hiraganaModel1
+        model = katakanaModel1
         label = []
         if(x == 0):
-            model = hiraganaModel1
-            label = Hiragana1
+            model = katakanaModel1
+            label = Katakana1
         if(x == 1):
-            model = hiraganaModel2
-            label = Hiragana2
+            model = katakanaModel2
+            label = Katakana2
         if(x == 2):
-            model = hiraganaModel3
-            label = Hiragana3
+            model = katakanaModel3
+            label = Katakana3
         if(x == 3):
-            model = hiraganaModel4
-            label = Hiragana4
+            model = katakanaModel4
+            label = Katakana4
         
         prediction = model.predict(test)
         print(prediction)
