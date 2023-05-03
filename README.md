@@ -73,3 +73,7 @@ This will install Flask, Flask-Cors, TensorFlow, Pillow, NumPy, and OpenCV.
    ```
    - This will start the server and you should be able to access it at http://localhost:5000/.
 
+## Repository Links
+1. <a href="https://github.com/LoyChaiEe/capstone_project_frontend">Frontend</a>
+2. <a href="https://github.com/LoyChaiEe/capstone_project_backend">Backend</a>
+3. <a href="https://github.com/LoyChaiEe/capstone_flask">Flask</a>
