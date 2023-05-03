@@ -1,10 +1,10 @@
 # Project Title
 
-[Insert your project name here]
+Learning Japanese With Waifu
 
 ## Description
 
-[Insert a brief description of your project here, including its purpose and main features]
+A similar app to Duolingo but adding more features like Waifu voice and also adding a writing component for users to practice writing simple anime characters. This repository houses the Flask server of this repo.
 
 ## Installation
 
@@ -75,14 +75,3 @@ This will install Flask, Flask-Cors, TensorFlow, Pillow, NumPy, and OpenCV.
    ```
    - This will start the server and you should be able to access it at http://localhost:5000/.
 
-## Usage
-
-[Insert instructions on how to use your Flask server here, including any relevant endpoints or APIs]
-
-## License
-
-[Insert information about the license you've chosen for your project, if applicable]
-
-## Contributing
-
-[Insert information on how others can contribute to your project, including any guidelines or processes you've put in place]
