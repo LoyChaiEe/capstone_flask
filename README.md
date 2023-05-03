@@ -1,6 +1,4 @@
-# Project Title
-
-Learning Japanese With Waifu
+# Learning Japanese With Waifu
 
 ## Description
 
